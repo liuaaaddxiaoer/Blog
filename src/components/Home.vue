@@ -26,5 +26,6 @@
   .home_container {
     display: flex;
     flex-direction: column;
+
   }
 </style>

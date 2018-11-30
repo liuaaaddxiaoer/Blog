@@ -1,5 +1,5 @@
 <template>
-  <div class="home_header_container">
+  <div class="home_header_container home">
     <h1>刘小二的技术博客</h1>
     <div class="tag_container">
       <span>首页</span>
@@ -29,8 +29,14 @@
 
 <style scoped lang="less">
   @import "../css/common";
+
+  @media screen and (min-width: 768px) {
+    .home_header_container.home{
+      height: 300px;
+    }
+  }
   .home_header_container {
-    height: 196px;
+    height: 9rem;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -39,6 +45,7 @@
     background: url("http://www.wuhaichao.com/static/image/top_back.jpg") center center;
     h1 {
       color: white;
+      text-align: center;
       font-size: 35px;
       margin-bottom: 55px;
     }
@@ -63,4 +70,5 @@
       }
     }
   }
+
 </style>
