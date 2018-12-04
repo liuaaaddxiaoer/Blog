@@ -1,18 +1,16 @@
 <template>
     <div class="home_section_container">
-      <div class="article_container">
+      <div class="article_container" v-for="article in articles">
         <div class="article">
-          <h3>iOS代码自动翻新(混淆)专家、ConfuseSoftware</h3>
+          <h3>{{article.title}}</h3>
           <div class="author_container">
             <span>作者:</span>
             <h5>刘小二</h5>
-            <span>2018年11月29日</span>
+            <span>{{article.create_time}}</span>
           </div>
-          <img src="http://www.wuhaichao.com/static/image/webfanx.png" alt="">
-          <p>iOS代码自动翻新(混淆)专家是一款新一代运行在MAC OS平台的App、完美支持Objc和Swift项目
-            代码的自动翻新(混淆)、支持文件名、类名、方法名、属性名、添加混
-            淆方法体、添加混淆属性、自动调用混淆方法等。。。功能强大而稳定。</p>
-          <button @click="goToArticleDetail">查看详情</button>
+          <img :src="article.article_icon" alt="">
+          <p>{{article.article_content}}</p>
+          <button @click="goToArticleDetail(article.id,$event)">查看详情</button>
         </div>
       </div>
       <div class="profile_container"><span>1</span></div>
@@ -22,9 +20,37 @@
 <script>
     export default {
         name: "HomeSection",
+        data() {
+          return {
+            articles: []
+          }
+        },
+
+        mounted() {
+          this.http.get('articleList')
+            .then((response)=>{
+              if (response.status == 200) {
+                if (response.data) {
+                  this.articles = response.data.data
+                }
+              }
+            }).catch(function (error) {
+              console.log(error)
+          })
+        },
+
         methods: {
-          goToArticleDetail: function () {
-            alert(1)
+          goToArticleDetail: function (id,event) {
+            this.$router.push({
+              name: 'Article',
+              params: {
+                id: id
+              }
+            }, function (a) {
+              console.log(a)
+            }, function (b) {
+              console.log(b)
+            })
           }
         }
     }
@@ -35,11 +61,12 @@
   .home_section_container {
     display: -webkit-flex;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     .bgColor;
-    padding: 30px;
+    padding: 1.5rem;
     .article_container {
       flex: 1;
+      margin-bottom: 1.5rem;
       .article {
         display: flex;
         flex-direction: column;
@@ -66,7 +93,7 @@
         }
         img {
           width: 100%;
-          max-height: 400px;
+          max-height: 10rem;
         }
         p {
           color: #444443;
@@ -89,8 +116,6 @@
     .profile_container {
       background: red;
       height: 100%;
-      /*width: 10%;*/
-      width: 0px;
       overflow: hidden;
     }
   }

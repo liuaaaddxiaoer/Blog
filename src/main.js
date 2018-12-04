@@ -5,6 +5,12 @@ import App from './App'
 import router from './router'
 import './css/reset.less'
 import './js/rem.js'
+import axios from './js/http.js'
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+import 'mavon-editor/src/lib/css/markdown.css'
+Vue.use(mavonEditor)
+Vue.prototype.http = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
