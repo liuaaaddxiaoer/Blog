@@ -2,7 +2,7 @@
   <div class="home_header_container home">
     <h1>刘小二的技术博客</h1>
     <div class="tag_container">
-      <span>首页</span>
+      <span @click="goToHome">首页</span>
       <span @click="goToGithub">Github</span>
       <span>关于</span>
       <span>开发文档</span>
@@ -22,6 +22,9 @@
       // 前往Github
       goToGithub: function () {
         window.location.href = this.gitAddress
+      },
+      goToHome: function () {
+        this.$router.push('/')
       }
     }
   }
@@ -50,6 +53,7 @@
       margin-bottom: 55px;
     }
     .tag_container {
+      cursor: pointer;
       height: 56px;
       .normalColor;
       display: flex;

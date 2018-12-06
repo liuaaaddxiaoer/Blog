@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import ArticleDetail from '@/components/ArticleDetail'
 import Writer from '@/components/Writer'
+import HomeVC_PC from '@/vc/HomeViewControler_PC'
 
 Vue.use(Router)
 

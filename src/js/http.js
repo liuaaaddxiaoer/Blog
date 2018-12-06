@@ -3,7 +3,7 @@ import axios from 'axios'
 let baseURL = 'http://localhost:8000/api/blog'
 
 if (process.env.NODE_ENV == 'production') {
-  baseURL = 'http://39.107.237.236/api/blog'
+  baseURL = 'https://liuxiaoer.club/api/blog'
 }
 
 axios.defaults.baseURL = baseURL;
