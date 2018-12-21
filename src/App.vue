@@ -10,16 +10,16 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   @import "./css/common";
 #app {
-  .bgColor;
-  /*height: 100%;*/
-  min-height: 100%;
+  height: 100%;
+  /*min-height: 100%;*/
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  width: 100%;
   /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
   ::-webkit-scrollbar
   {
@@ -31,6 +31,7 @@ export default {
   /*定义滚动条轨道 内阴影+圆角*/
   ::-webkit-scrollbar-track
   {
+
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
     background-color: #F5F5F5;
@@ -40,7 +41,7 @@ export default {
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
-    .mainBgColor;
+    background-color: pink;
   }
 }
 </style>

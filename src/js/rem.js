@@ -1,4 +1,12 @@
 (function (win,doc) {
+
+  if (process.env.NODE_ENV == 'production') {
+    win.console.log = function () {
+
+    }
+  }
+
+
     var htmlE = doc.documentElement
 
     var resizeMethodName = 'orientationchange' in win ? 'orientationchange' : 'resize'

@@ -1,9 +1,12 @@
-import Vue from 'vue'
+// import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import ArticleDetail from '@/components/ArticleDetail'
-import Writer from '@/components/Writer'
-import HomeVC_PC from '@/vc/HomeViewControler_PC'
+// import Home from '@/components/Home'
+
+const Home = () => import('@/components/Home')
+const ArticleDetail = () => import('@/components/ArticleDetail')
+const Writer = () => import('@/components/Writer')
+
+// import HomeVC_PC from '@/vc/HomeViewControler_PC'
 
 Vue.use(Router)
 

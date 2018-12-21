@@ -3,11 +3,60 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link href="https://cdn.bootcss.com/github-markdown-css/2.10.0/github-markdown.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mavon-editor/dist/css/index.css">-->
+    <!--https://unpkg.com/mavon-editor/dist/css/index.css-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mavon-editor"></script>
     <title>刘小二的技术博客</title>
   </head>
   <body>
+  <script>
+    setTimeout(function () {
+      var link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.style = 'text/css'
+      link.href = 'https://cdn.jsdelivr.net/npm/mavon-editor/dist/css/index.css'
+      document.body.appendChild(link)
+
+
+      var script1 = document.createElement('script')
+      script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js'
+      document.body.appendChild(script1)
+
+      var script2 = document.createElement('script')
+      script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.js'
+      document.body.appendChild(script2)
+
+
+
+
+      var link2 = document.createElement('link')
+      link2.rel = 'stylesheet'
+      link2.style = 'text/css'
+      link2.href = 'https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css'
+      document.body.appendChild(link2)
+
+      var link3 = document.createElement('link')
+      link3.rel = 'stylesheet'
+      link3.style = 'text/css'
+      link3.href = 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.3/katex.min.css'
+      document.body.appendChild(link3)
+
+      var link4 = document.createElement('link')
+      link4.rel = 'stylesheet'
+      link4.style = 'text/css'
+      link4.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs2015.min.css'
+      document.body.appendChild(link4)
+
+    }, 1000)
+
+
+
+
+
+  </script>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
   </body>
 </html>

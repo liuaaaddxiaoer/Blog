@@ -15,6 +15,18 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+
+  externals: {
+    'vue': 'Vue',
+    'mavon-editor': 'mavonEditor',
+    // 'vue-router': 'VueRouter',
+    // 'vuex': 'Vuex',
+    // 'vue-moment': 'VueMoment',
+    // 'highlight.js': 'hljs',
+
+  },
+
+
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

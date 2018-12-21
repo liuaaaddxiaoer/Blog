@@ -5,7 +5,7 @@
       <span @click="goToHome">首页</span>
       <span @click="goToGithub">Github</span>
       <span>关于</span>
-      <span>开发文档</span>
+      <span @click="goToWriter">后台管理</span>
     </div>
   </div>
 </template>
@@ -25,6 +25,9 @@
       },
       goToHome: function () {
         this.$router.push('/')
+      },
+      goToWriter: function () {
+        this.$router.push('/writer')
       }
     }
   }
@@ -33,11 +36,11 @@
 <style scoped lang="less">
   @import "../css/common";
 
-  @media screen and (min-width: 768px) {
-    .home_header_container.home{
-      height: 300px;
-    }
-  }
+  /*@media screen and (min-width: 768px) {*/
+    /*.home_header_container.home{*/
+      /*height: 300px;*/
+    /*}*/
+  /*}*/
   .home_header_container {
     height: 9rem;
     display: -webkit-flex;
@@ -45,9 +48,10 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
-    background: url("http://www.wuhaichao.com/static/image/top_back.jpg") center center;
+    background: url("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3132607591,1075681328&fm=27&gp=0.jpg") 0 -35px;
+    background-size: 150px 150px;
     h1 {
-      color: white;
+      .mainColor;
       text-align: center;
       font-size: 35px;
       margin-bottom: 55px;
